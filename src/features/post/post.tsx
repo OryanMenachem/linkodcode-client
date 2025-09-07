@@ -6,8 +6,8 @@ export default function Post({ post }: { post: TypePost }) {
       <h1 className="title post--title">{post.postTitle}</h1>
       <img className="img post--img" src={post.imgSrc} alt={post.imgAlt} />
       <p className="post-description">{post.postDescription}</p>
-      <LikeBtn likesNumber={0} />
-      <CurrentDateTime classname="post" />
+      <LikeBtn likesNumber={post.likesNumber} />
+      <DateTime classname="post" timestamp={post.timestamp} />
     </article>
   );
 }
@@ -18,10 +18,16 @@ export type TypePost = {
   imgSrc?: string;
   imgAlt?: string;
   likesNumber: number;
+  timestamp: string;
 };
 
-export function CurrentDateTime({ classname }: { classname: string }) {
-  const timestamp = new Date().toLocaleString();
+export function DateTime({
+  classname,
+  timestamp,
+}: {
+  classname: string;
+  timestamp: string;
+}) {
   return (
     <time className={`time ${classname}--time`} dateTime={timestamp}>
       {timestamp}
@@ -49,4 +55,5 @@ export const postTest: TypePost = {
   imgSrc: "../../../public/vite.svg",
   imgAlt: "vite logo",
   likesNumber: 0,
+  timestamp: "07-09-2025",
 };
