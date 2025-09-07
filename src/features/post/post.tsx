@@ -13,6 +13,7 @@ export default function Post({ post }: { post: TypePost }) {
 }
 
 export type TypePost = {
+  id: number;
   postTitle: string;
   postDescription: string;
   imgSrc?: string;
