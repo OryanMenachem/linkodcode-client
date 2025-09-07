@@ -1,5 +1,5 @@
 import Posts from "./pages/Posts";
-import data from "./data";
+import data from "./data/data";
 import "./App.css";
 
 function App() {
