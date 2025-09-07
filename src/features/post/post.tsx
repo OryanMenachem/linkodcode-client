@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { DateTime, LikeBtn } from "../../components/General";
 
 export default function Post({ post }: { post: TypePost }) {
   return (
@@ -19,41 +19,4 @@ export type TypePost = {
   imgAlt?: string;
   likesNumber: number;
   timestamp: string;
-};
-
-export function DateTime({
-  classname,
-  timestamp,
-}: {
-  classname: string;
-  timestamp: string;
-}) {
-  return (
-    <time className={`time ${classname}--time`} dateTime={timestamp}>
-      {timestamp}
-    </time>
-  );
-}
-export function LikeBtn({ likesNumber }: { likesNumber: number }) {
-  const [likes, setLikes] = useState(likesNumber);
-  const [liked, setLiked] = useState(false);
-
-  const addRemoveLike = () => {
-    !liked ? setLikes(likes + 1) : setLikes(likes - 1);
-    setLiked(!liked);
-  };
-  return (
-    <button className="btn likes-btn" onClick={() => addRemoveLike()}>
-      👍{likes}
-    </button>
-  );
-}
-
-export const postTest: TypePost = {
-  postTitle: "Oryan",
-  postDescription: "A test post",
-  imgSrc: "../../../public/vite.svg",
-  imgAlt: "vite logo",
-  likesNumber: 0,
-  timestamp: "07-09-2025",
 };
