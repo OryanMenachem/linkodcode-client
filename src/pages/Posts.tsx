@@ -1,7 +1,8 @@
-import Post from "../features/post/Post";
-// import { type TypePost } from "../features/post/Post";
+import Post from "../features/post/post";
+import data from "../data/data";
 
-export default function Posts({ postsArray }: { postsArray: any[] }) {
+export default function Posts() {
+  const postsArray = data;
   return (
     <div className="page posts-page">
       <h1 className="title posts-title">Posts</h1>
