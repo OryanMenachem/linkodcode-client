@@ -1,4 +1,4 @@
-import { DateTime, LikeBtn } from "../../components/General";
+import { DateTime, LikeBtn } from "../../components";
 
 export default function Post({ post }: { post: TypePost }) {
   return (

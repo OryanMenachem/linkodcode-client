@@ -1,6 +1,5 @@
-import Post from "../features/post/Post";
+import Post from "../features/post/post";
 // import { type TypePost } from "../features/post/Post";
-
 
 export default function Posts({ postsArray }: { postsArray: any[] }) {
   return (
@@ -14,6 +13,3 @@ export default function Posts({ postsArray }: { postsArray: any[] }) {
     </div>
   );
 }
-
-
-
