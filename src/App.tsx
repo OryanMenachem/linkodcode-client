@@ -1,11 +1,9 @@
-import Posts from "./pages/Posts";
-import data from "./data/data";
-import "./App.css";
+import Router from "./router/Router";
 
 function App() {
   return (
     <>
-      <Posts postsArray={data} />
+      <Router />
     </>
   );
 }

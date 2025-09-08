@@ -10,7 +10,7 @@ export function LikeBtn({ likesNumber }: { likesNumber: number }) {
   };
   return (
     <button className="btn likes-btn" onClick={() => addRemoveLike()}>
-      👍{likes}
+      {likes}👍
     </button>
   );
 }
