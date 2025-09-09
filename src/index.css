@@ -213,3 +213,17 @@ a:hover {
 }
 
 /*  */
+
+/* home page */
+.home--title {
+  font-size: 5rem;
+  margin: 0;
+}
+.app-description {
+  justify-self: center;
+  padding: 0;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+/*  */

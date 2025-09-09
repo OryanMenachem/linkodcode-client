@@ -6,6 +6,7 @@ export function Nav() {
       <Link to={"/"}>Home</Link>
       <Link to={"/posts"}>Posts</Link>
       <Link to={"/add-post"}>Add Post</Link>
+      <Link to={"/single-post"}>Single Post</Link>
     </nav>
   );
 }

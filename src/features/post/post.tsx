@@ -4,14 +4,17 @@ import { useNavigate } from "react-router-dom";
 export default function Post({ post }: { post: Post }) {
   const navigate = useNavigate();
   return (
-    <article
-      className="post-card post-post--card"
-      onClick={() => navigate("/single-post", { state: { id: post.id } })}
-    >
+    <article className="post-card post-post--card">
       <h1 className="post--title">{post.postTitle}</h1>
       <img className="post--img" src={post.imgSrc} alt={post.imgAlt} />
       <p className="post-description">{post.postDescription}</p>
       <LikeBtn likesNumber={post.likesNumber} />
+      <button
+        onClick={() => navigate("/single-post", { state: { id: post.id } })}
+      >
+       
+        View
+      </button>
       <DateTime classname="post" timestamp={post.timestamp} />
     </article>
   );
