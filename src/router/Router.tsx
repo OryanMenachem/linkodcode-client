@@ -7,8 +7,8 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route element={<LayoutMain />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Posts />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/posts" element={<Posts />} />
           <Route path="/add-post" element={<AddPost />} />
           <Route path="*" element={<NotFound />} />
         </Route>
