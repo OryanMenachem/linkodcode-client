@@ -1,7 +1,7 @@
 // import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { type Post } from "../features/post/post";
-import { httpRequest, timeStamp, type Url } from "../utils/helpers";
+import { type Post } from "../../features/post/post";
+import { httpRequest, timeStamp, type Url } from "../../utils/helpers";
 
 export default function AddPost() {
   const [postTitle, setPostTitle]: [postTitle: string, setPostTitle: any] =

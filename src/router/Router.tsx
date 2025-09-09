@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import LayoutMain from "../components/layout/mainLayout/MainLayout";
-import { Posts, Home, NotFound, AddPost } from "../pages";
+import { Posts, Home, NotFound, AddPost, SinglePost } from "../pages";
 
 export default function Router() {
   return (
@@ -10,6 +10,7 @@ export default function Router() {
           <Route path="/" element={<Home />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/add-post" element={<AddPost />} />
+          <Route path="/single-post" element={<SinglePost />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
