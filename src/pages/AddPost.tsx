@@ -6,7 +6,11 @@ export default function AddPost() {
   return (
     <div className="page add-post--page">
       <h1 className="title add-post--title">Add Post</h1>
-      <form action="http://localhost:3000/post" method="post">
+      <form
+        className="post-card add-post--post-card"
+        action="http://localhost:3000/post"
+        method="post"
+      >
         <label className="label title--label" htmlFor="title">
           title
         </label>
@@ -46,6 +50,7 @@ export default function AddPost() {
           name="imgAlt"
           required
         />
+        <button type="submit">add post</button>
       </form>
     </div>
   );
