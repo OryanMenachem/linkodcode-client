@@ -1,10 +1,11 @@
-import Post from "../features/post/post";
-import { Loading } from "../components/General";
-import { useEffect, useState } from "react";
-import { httpRequest, type Url } from "../utils/helpers";
+import Post from "../../features/post/post";
+import { Loading } from "../../components/General";
+import { useEffect, useContext } from "react";
+import { httpRequest, type Url } from "../../utils/helpers";
+import { postsContext } from "../../context/Posts";
 
 export default function Posts() {
-  const [postsData, setPostsData]: [postsData: object[], setPostsData: any] = useState([]);
+  const { posts, setPosts } = useContext(postsContext);
   useEffect(() => {
     async function getPosts() {
       const url: Url = {
@@ -13,10 +14,10 @@ export default function Posts() {
       };
       const result = await httpRequest(url);
       if (!result.error && result.content?.length) {
-        setPostsData(result.content);
+        setPosts(result.content);
       }
     }
-    if (!postsData.length) {
+    if (!posts.length) {
       getPosts();
     }
   }, []);
@@ -24,11 +25,7 @@ export default function Posts() {
   return (
     <div className="page posts-page">
       <h1 className="title posts-title">Posts</h1>
-      {postsData.length ? (
-        <PostsContainer postsData={postsData} />
-      ) : (
-        <Loading />
-      )}
+      {posts.length ? <PostsContainer postsData={posts} /> : <Loading />}
     </div>
   );
 }
