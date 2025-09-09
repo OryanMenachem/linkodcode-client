@@ -3,6 +3,7 @@ import { type Post } from "../features/post/post";
 
 const typeExContextState = {
   posts: [],
+  
 };
 export const postsContext =
   createContext<TypeExContextType>(typeExContextState);
