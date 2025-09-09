@@ -2,11 +2,10 @@ import { Link } from "react-router";
 
 export function Nav() {
   return (
-    <nav className="nav main--nav">
+    <nav className="main--nav">
       <Link to={"/"}>Home</Link>
-      <Link to={"/profile"}>Profile</Link>
-      <Link to={"/settings"}>Settings</Link>
-      <Link to={"/about"}>About</Link>
+      <Link to={"/posts"}>Posts</Link>
+      <Link to={"/add-post"}>Add Post</Link>
     </nav>
   );
 }

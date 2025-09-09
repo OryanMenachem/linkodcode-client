@@ -2,26 +2,28 @@
 // import { useState } from "react";
 
 export default function AddPost() {
+  const timestamp = 0;
   return (
-    <div className="page add-post-page">
+    <div className="page add-post--page">
+      <h1 className="title add-post--title">Add Post</h1>
       <form action="http://localhost:3000/post" method="post">
-        <label className="label title-label" htmlFor="title">
+        <label className="label title--label" htmlFor="title">
           title
         </label>
         <input
-          className="input title-input"
+          className="input title--input"
           type="text"
-          name="title"
+          name="postTitle"
           required
         />
 
-        <label className="label title-label" htmlFor="title">
+        <label className="label title--label" htmlFor="title">
           description
         </label>
         <input
           className="input post-description--input"
           type="text"
-          name="title"
+          name="postDescription"
           required
         />
 
@@ -44,9 +46,7 @@ export default function AddPost() {
           name="imgAlt"
           required
         />
-
       </form>
     </div>
   );
 }
-

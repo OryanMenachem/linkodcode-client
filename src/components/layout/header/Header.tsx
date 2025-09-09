@@ -2,7 +2,7 @@ import { Nav } from "../nav/Nav";
 
 export function Header() {
   return (
-    <header className="header main-header">
+    <header className="main--header">
       <img
         className="logo-linkodcode"
         src="/logo/linkodcode-logo.jpeg"
