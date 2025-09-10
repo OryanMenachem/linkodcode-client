@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-export function Nav() {
+export function MainNav() {
   return (
     <nav className="main--nav">
       <Link to={"/"}>Home</Link>

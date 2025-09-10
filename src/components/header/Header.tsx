@@ -1,6 +1,6 @@
-import { Nav } from "../nav/Nav";
+import { MainNav } from "../nav/Nav";
 
-export function Header() {
+export function MainHeader() {
   return (
     <header className="main--header">
       <img
@@ -8,7 +8,7 @@ export function Header() {
         src="/logo/linkodcode-logo.jpeg"
         alt="linkodcode-logo"
       />
-      <Nav />
+      <MainNav />
     </header>
   );
 }

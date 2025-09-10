@@ -1,5 +1,5 @@
 import Post from "../../features/post/post";
-import { Loading } from "../../components/General";
+import { Loading } from "../../components/common/Common";
 import { useEffect, useContext } from "react";
 import { httpRequest, type Url } from "../../utils/helpers";
 import { postsContext } from "../../context/Posts";

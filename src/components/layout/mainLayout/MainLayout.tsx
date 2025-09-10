@@ -1,11 +1,11 @@
 import { Outlet } from "react-router";
-import { Footer } from "../footer/Footer";
-import { Header } from "../header/Header";
+import { Footer } from "../../footer/Footer";
+import { MainHeader } from "../../header/Header";
 
-const LayoutMain = () => {
+const MainLayout = () => {
   return (
     <div className="layout main--layout">
-      <Header />
+      <MainHeader />
       <main className="main-child">
         <Outlet />
       </main>
@@ -14,4 +14,4 @@ const LayoutMain = () => {
   );
 };
 
-export default LayoutMain;
+export default MainLayout;

@@ -1,7 +1,5 @@
-// import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { type Post } from "../../features/post/post";
-import { httpRequest, timeStamp, type Url } from "../../utils/helpers";
+import { addPost } from "./services";
 
 export default function AddPost() {
   const [postTitle, setPostTitle]: [postTitle: string, setPostTitle: any] =
@@ -76,29 +74,4 @@ export default function AddPost() {
       </button>
     </div>
   );
-}
-
-async function addPost(
-  postTitle: string,
-  postDescription: string,
-  imgSrc?: string,
-  imgAlt?: string
-) {
-  const post: Post = {
-    postTitle,
-    postDescription,
-    imgSrc: `http://localhost:3000/images/${imgSrc}.jpg`,
-    imgAlt,
-    likesNumber: 0,
-    timestamp: timeStamp(),
-  };
-
-  const url: Url = {
-    url: "http://localhost:3000/post",
-    method: "POST",
-    body: post,
-  };
-  const result = await httpRequest(url);
-  console.log(result.content);
-  return result.content;
 }

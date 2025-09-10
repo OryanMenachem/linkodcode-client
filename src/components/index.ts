@@ -1,7 +1,8 @@
 import { LikeBtn } from "./button/Button";
-import { Footer } from "./layout/footer/Footer";
-import { Header } from "./layout/header/Header";
-import { Nav } from "./layout/nav/Nav";
-import { DateTime } from "./time/Time";
+import { Footer } from "./footer/Footer";
+import { MainHeader } from "./header/Header";
+import { MainNav } from "./nav/Nav";
+import { DateTime } from "./common/Common";
+import MainLayout from "./layout/mainLayout/MainLayout";
 
-export { LikeBtn, Footer, Header, Nav, DateTime };
+export { LikeBtn, Footer, MainHeader, MainNav, DateTime, MainLayout };
