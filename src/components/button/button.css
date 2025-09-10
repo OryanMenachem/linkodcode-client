@@ -1,0 +1,54 @@
+/* btn */
+.btn {
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+/*  */
+/* LikeBtn() */
+.likes-btn {
+  border-radius: 1em;
+  width: 3em;
+  height: 3em;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+/*  */
+
+/* LoginButtons() */
+.login-button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: center;
+  margin-top: 8rem;
+  height: 10rem;
+  width: 25rem;
+  gap: 2rem;
+}
+
+.signIn-btn,
+.signUp-btn {
+  font-size: 1rem;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  justify-self: center;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 1rem;
+  background-color: var(--secondary-color);
+}
+
+/*  */
+
+@media only screen and (max-width: 700px) {
+  .login-button-container {
+    grid-template-rows: 1fr 1fr;
+    justify-self: center;
+    margin-top: 8rem;
+    height: 15rem;
+    width: 25rem;
+    gap: 2rem;
+  }
+}

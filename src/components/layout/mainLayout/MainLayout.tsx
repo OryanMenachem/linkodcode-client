@@ -1,8 +1,8 @@
 import { Outlet } from "react-router";
 import { Footer } from "../../footer/Footer";
-import { MainHeader } from "../../header/Header";
+import { MainHeader, UserHeader } from "../../header/Header";
 
-const MainLayout = () => {
+export const MainLayout = () => {
   return (
     <div className="layout main--layout">
       <MainHeader />
@@ -14,4 +14,16 @@ const MainLayout = () => {
   );
 };
 
-export default MainLayout;
+export const UserLayout = () => {
+  return (
+    <div className="layout main--layout">
+      <UserHeader />
+      <main className="main-child">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+

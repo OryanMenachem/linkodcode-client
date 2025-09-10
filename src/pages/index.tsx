@@ -3,5 +3,6 @@ import Home from "./home/Home";
 import NotFound from "./not-found/NotFound";
 import AddPost from "./add-post/AddPost";
 import SinglePost from "./single-post/SinglePost";
+import Login from "./login/Login";
 
-export { Home, Posts, NotFound, AddPost, SinglePost };
+export { Home, Posts, NotFound, AddPost, SinglePost, Login };

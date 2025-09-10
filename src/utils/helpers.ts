@@ -1,5 +1,3 @@
-
-
 export function timeStamp(): string {
   const timestamp = new Date().toLocaleString();
   return timestamp;
@@ -23,6 +21,7 @@ export async function httpRequest({ url, method, body = null }: Url) {
 
   try {
     const response = await fetch(url, options);
+
     if (!response.ok) {
       result.status = response.status;
       result.error = true;
@@ -33,7 +32,6 @@ export async function httpRequest({ url, method, body = null }: Url) {
     result.status = response.status;
     result.message = response.statusText;
     result.content = await response.json();
-
     return result;
   } catch (error) {
     result.error = true;
@@ -51,5 +49,14 @@ export type HttpResult = {
   status?: number;
   message?: string;
   error: boolean;
-  content?: object[];
+  content?: object[] | object | string;
 };
+
+export function parseJWT({token} : {token: string}) {
+  if (token) {
+    const payload = token.split(".")[1];
+    const decoded = atob(payload.replace(/-/g, "+").replace(/_/g, "/"));
+    return JSON.parse(decoded);
+  }
+  return null;
+}
