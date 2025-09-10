@@ -23,6 +23,6 @@ export async function addPost(
     body: post,
   };
   const result = await httpRequest(url);
-  console.log(result.content);
+
   return result.content;
 }

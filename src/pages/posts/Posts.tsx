@@ -13,7 +13,11 @@ export default function Posts() {
         method: "GET",
       };
       const result = await httpRequest(url);
-      if (!result.error && result.content?.length) {
+      if (
+        !result.error &&
+        Array.isArray(result.content) &&
+        result.content.length
+      ) {
         setPosts(result.content);
       }
     }

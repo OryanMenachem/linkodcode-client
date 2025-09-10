@@ -13,6 +13,7 @@ export default function SinglePost() {
   if (posts.length) {
     post = posts.find((p: any) => p.id === id);
   }
+
   return (
     <div className="page single-post--page">
       {post ? <PostView post={post} /> : <Loading />}
