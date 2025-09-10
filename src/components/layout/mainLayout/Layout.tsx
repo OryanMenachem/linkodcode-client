@@ -16,7 +16,7 @@ export const MainLayout = () => {
 
 export const UserLayout = () => {
   return (
-    <div className="layout main--layout">
+    <div className="layout user--layout">
       <UserHeader />
       <main className="main-child">
         <Outlet />
