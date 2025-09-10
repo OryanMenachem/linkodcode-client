@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { postsContext } from "../../context/Posts";
 import { LikeBtn, DateTime } from "../../components";
 import type { Post } from "../../features/post/post";
-import { Loading } from "../../components/General";
+import { Loading } from "../../components/common/Common";
 
 export default function SinglePost() {
   const location = useLocation();

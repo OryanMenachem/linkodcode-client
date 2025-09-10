@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import LayoutMain from "../components/layout/mainLayout/MainLayout";
+import MainLayout from "../components/layout/mainLayout/MainLayout";
 import { Posts, Home, NotFound, AddPost, SinglePost } from "../pages";
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<LayoutMain />}>
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/add-post" element={<AddPost />} />
