@@ -1,0 +1,7 @@
+/* loading */
+.loading {
+  justify-self: center;
+  color: var(--secondary-color);
+  font-size: 3rem;
+  font-family: var(--font-family);
+}

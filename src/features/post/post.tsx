@@ -1,7 +1,7 @@
 import { DateTime, LikeBtn } from "../../components";
 import { useNavigate } from "react-router-dom";
 
-export default function Post({ post }: { post: Post }) {
+export default function Post({ post }: { post: TypePost }) {
   const navigate = useNavigate();
   return (
     <article className="post-card post-post--card">
@@ -19,7 +19,7 @@ export default function Post({ post }: { post: Post }) {
   );
 }
 
-export type Post = {
+export type TypePost = {
   id?: number;
   postTitle: string;
   postDescription: string;

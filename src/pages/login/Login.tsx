@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth as authManager } from "./services";
+import { authManager } from "./services";
 
 export default function Login() {
   const location = useLocation();
@@ -50,15 +50,18 @@ export function Auth({ loginMode }: { loginMode: string }) {
         className="btn auth--btn"
         onClick={async () => {
           try {
-            const role: any = await authManager({ username, password }, loginMode);
-            
+            const role: any = await authManager(
+              { username, password },
+              loginMode
+            );
+
             if (role === "admin" || role === "user") {
               navigate("/posts");
             } else {
               navigate("/");
             }
-          } catch (error) {
-            console.error("Authentication failed:", error);
+          } catch (error: any) {
+            throw new Error(error);
           } finally {
             setIsLoading(false);
           }

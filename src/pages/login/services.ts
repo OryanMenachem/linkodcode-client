@@ -1,7 +1,7 @@
 import { httpRequest, type Url } from "../../utils/helpers";
 import { parseJWT } from "../../utils/helpers";
 
-export async function auth(
+export async function authManager(
   body: {
     username: string;
     password: string;
@@ -17,7 +17,7 @@ export async function auth(
   if (result.content) {
     const token: any = result.content;
     const decodedToken = parseJWT(token);
-    localStorage.setItem("decodedToken", decodedToken)
+    localStorage.setItem("decodedToken", decodedToken);
     return decodedToken.role;
   }
   return result.message;

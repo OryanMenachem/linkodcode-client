@@ -1,5 +1,5 @@
 import { timeStamp, httpRequest } from "../../utils/helpers";
-import type { Post } from "../../features/post/post";
+import type { TypePost } from "../../features/post/post";
 import type { Url } from "../../utils/helpers";
 
 export async function addPost(
@@ -8,7 +8,7 @@ export async function addPost(
   imgSrc?: string,
   imgAlt?: string
 ) {
-  const post: Post = {
+  const post: TypePost = {
     postTitle,
     postDescription,
     imgSrc: `http://localhost:3000/images/${imgSrc}.jpg`,

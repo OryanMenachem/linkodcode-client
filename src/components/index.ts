@@ -3,7 +3,7 @@ import { Footer } from "./footer/Footer";
 import { MainHeader, UserHeader } from "./header/Header";
 import { MainNav, UserNav } from "./nav/Nav";
 import { DateTime } from "./common/Common";
-import { MainLayout, UserLayout } from "./layout/mainLayout/MainLayout";
+import { MainLayout, UserLayout } from "./layout/mainLayout/Layout";
 
 export {
   LikeBtn,
