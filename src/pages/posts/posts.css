@@ -1,0 +1,21 @@
+
+.post-display-container {
+  height: 40rem;
+  width: 30rem;
+  justify-self: center;
+  display: grid;
+  grid-auto-rows: 1fr;
+  scrollbar-width: none;
+  overflow: scroll;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
+.posts-title {
+  margin: 0;
+  padding: 0;
+  justify-self: center;
+  font-size: 5rem;
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+}

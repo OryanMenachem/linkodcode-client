@@ -1,0 +1,13 @@
+/* main layout */
+.layout {
+  display: grid;
+  grid-template-rows: 8rem 1fr 2rem;
+  grid-template-areas:
+    "main-header "
+    "main-child"
+    "footer";
+}
+
+.main-child {
+  grid-area: main-child;
+}
