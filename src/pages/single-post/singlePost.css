@@ -1,3 +1,6 @@
 .search-post {
   justify-self: center;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1rem;
 }
